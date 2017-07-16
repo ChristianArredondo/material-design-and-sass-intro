@@ -14,10 +14,12 @@ import {
   MdIconModule,
   MdGridListModule,
   MdListModule } from '@angular/material';
+import { TestComponentComponent } from './test-component/test-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TestComponentComponent,
   ],
   imports: [
     BrowserModule,
