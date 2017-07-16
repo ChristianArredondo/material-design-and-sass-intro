@@ -1,0 +1,30 @@
+<md-toolbar color="primary">
+
+    <span>My First Material Design UI</span>
+    <span class="example-spacer"></span>
+    <button md-button [mdMenuTriggerFor]="appMenu"><md-icon class="example-icon">menu</md-icon> Menu</button>
+
+</md-toolbar>
+
+<md-menu #appMenu="mdMenu">
+  <button md-menu-item> Settings </button>
+  <button md-menu-item> Help </button>
+  <button md-menu-item> Contact </button>
+</md-menu>
+
+<md-grid-list cols="2">
+  <md-grid-tile *ngFor="let data of (myData ? myData.slice(0,6): []); let i = index">
+      <md-card class="example-card">
+      <img md-card-image src="{{ data.url }}">
+      <md-card-header>
+        <md-card-title>{{ data.title }}</md-card-title>
+      </md-card-header>
+
+      <md-card-actions>
+        <button md-button>LIKE</button>
+        <button md-button>SHARE</button>
+      </md-card-actions>
+    </md-card>
+  </md-grid-tile>
+</md-grid-list>
+
